@@ -1,31 +1,31 @@
 <script>
     // COMPONENTS
     import { onMount } from 'svelte';
-    // import { writable } from 'svelte/store';
+    import { writable } from 'svelte/store';
+    import Checklist from '$components/Checklist.svelte';
 
-    
+    import data from '$data/data.js';
 
-    // DATA
-    // import data from "$data/data.js";
-
-    // VARIABLES
-    let data;
-  
 
     async function init() {
-        console.log('INIT APP')
+        console.log('INIT')
+        // clear local storage
+        // localStorage.removeItem("checklist");
     }
 
     onMount(init);
+
 </script>
 
 <header>
-    <h1>VS SvelteKit Template</h1>
-    <p class="subhead">Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+    <h1>24 must-try wines at the 2025 Vancouver International Wine Festival tasting room</h1>
+    <!-- <p class="subhead">Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p> -->
 </header>
 
 <main>
-
+    <p class="section-head">12 Canadian wines to try</p>
+    <p class="section-copy">Picking the best local wines is fast becoming a challenge. Here is a look at some of the do-not-miss local heroes being poured at the festival.</p>
+    <Checklist data={data.local} />
 </main>
 
 <footer>
@@ -45,26 +45,18 @@
 	header > h1 {
 		text-align: center;
 	}
-	header .subhead {
+	/* header .subhead {
 		margin: 0 auto;
 		max-width: 525px;
 		text-align: center;
-	}
+	} */
 
-    /* COMBOBOX SELECTOR */
-  	:global(.svelte-select) {
-		margin: 1rem auto !important;
-		max-width: 250px;
-  	}
-  	:global(input:focus) {
-		outline: none;
-  	}
-
-	:global(
-		.svelte-select .selected-item,
-		.svelte-select .item,
-		.svelte-select input
-	) {
-		font-family: 'BentonSansCond-Regular', sans;
-	}
+    /*  */
+    .section-head {
+        color: var(--grey02) !important;
+        font-family: 'BentonSansCond-RegItalic' !important;
+        font-size: 1.35rem;
+        margin-bottom: 7px;
+        text-transform: uppercase;
+    }
 </style>
