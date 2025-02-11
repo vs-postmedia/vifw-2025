@@ -8,7 +8,7 @@
 
     async function init() {
         console.log('APP INIT')
-        console.log('APP: ', data)
+        console.log('APP DATA: ', data)
         // clear local storage
         // localStorage.removeItem("checklist");
     }
