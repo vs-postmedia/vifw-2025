@@ -10,7 +10,7 @@
         console.log('APP INIT')
         console.log('APP DATA: ', data)
         // clear local storage
-        // localStorage.removeItem("checklist");
+        localStorage.removeItem("checklist");
     }
 
     onMount(init);
@@ -26,10 +26,7 @@
 </header>
 
 <main>
-    <p class="section-head">12 Canadian wines to try</p>
-    <p class="section-copy">Picking the best local wines is fast becoming a challenge. Here is a look at some of the do-not-miss local heroes being poured at the festival.</p>
-    
-    <Checklist data={local} />
+    <Checklist data={data.all} />
 </main>
 
 <footer>
@@ -55,12 +52,16 @@
 		text-align: center;
 	} */
 
-    /*  */
+    /* SECTIONS  */
     .section-head {
         color: var(--grey02) !important;
         font-family: 'BentonSansCond-RegItalic' !important;
         font-size: 1.35rem;
         margin-bottom: 7px;
+        text-align: center;
         text-transform: uppercase;
+    }
+    .section-copy {
+        text-align: center;
     }
 </style>
