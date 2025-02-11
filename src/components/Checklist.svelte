@@ -32,6 +32,7 @@
     onMount(init);
 
     $: console.log(data)
+    $: reactiveData = data;
 </script>
 
 <main>
