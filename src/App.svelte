@@ -1,6 +1,7 @@
 <script>
     // COMPONENTS
     import { onMount } from 'svelte';
+    // import { writable } from 'svelte/store';
 
     
 
@@ -8,8 +9,7 @@
     // import data from "$data/data.js";
 
     // VARIABLES
-    let data
-
+    let data;
   
 
     async function init() {
