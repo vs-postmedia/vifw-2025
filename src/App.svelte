@@ -7,17 +7,17 @@
 
 
     async function init() {
-        console.log('INIT')
-        console.log('DATA: ', data)
+        console.log('APP INIT')
+        console.log('APP: ', data)
         // clear local storage
         // localStorage.removeItem("checklist");
     }
 
     onMount(init);
 
-    // 
-    $: local = data.local;
-    // $: global = data.global;
+    // VARS
+    const local = data.local;
+    const global = data.global;
 </script>
 
 <header>
@@ -28,7 +28,8 @@
 <main>
     <p class="section-head">12 Canadian wines to try</p>
     <p class="section-copy">Picking the best local wines is fast becoming a challenge. Here is a look at some of the do-not-miss local heroes being poured at the festival.</p>
-    <Checklist bind:data={local} />
+    
+    <Checklist data={local} />
 </main>
 
 <footer>

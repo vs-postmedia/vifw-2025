@@ -5,7 +5,6 @@
     import { onMount } from 'svelte';
     import { writable } from 'svelte/store';
 
-
     // VARS
     const storedChecklist = JSON.parse(localStorage.getItem('checklist')) || data;
     const checklist = writable(storedChecklist);
@@ -17,7 +16,6 @@
 
     // functions
     function toggleCheck(index) {
-        console.log(index)
         checklist.update(items => {
             return items.map((item, i) => i === index ? { ...item, checked: !item.checked } : item);
         });
@@ -25,14 +23,11 @@
 
     // FUNCTIONS
     function init() {
-        console.log('CHART INIT!')
+        console.log('CHECKLIST INIT!')
     }
 
     // LIGHTS! CAMERA! ACTION!
     onMount(init);
-
-    $: console.log(data)
-    $: reactiveData = data;
 </script>
 
 <main>
