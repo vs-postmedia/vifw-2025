@@ -3,7 +3,6 @@
     import { onMount } from 'svelte';
     import { writable } from 'svelte/store';
     import Checklist from '$components/Checklist.svelte';
-
     import data from '$data/data.js';
 
 
@@ -16,6 +15,9 @@
 
     onMount(init);
 
+    // 
+    $: local = data.local;
+    // $: global = data.global;
 </script>
 
 <header>
@@ -26,7 +28,7 @@
 <main>
     <p class="section-head">12 Canadian wines to try</p>
     <p class="section-copy">Picking the best local wines is fast becoming a challenge. Here is a look at some of the do-not-miss local heroes being poured at the festival.</p>
-    <Checklist data={data.local} />
+    <Checklist bind:data={local} />
 </main>
 
 <footer>
