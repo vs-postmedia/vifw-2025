@@ -10,10 +10,10 @@
         console.log('APP INIT')
         console.log('APP DATA: ', data)
         // clear local storage
-        localStorage.removeItem("checklist");
+        // localStorage.removeItem("checklist");
     }
 
-    onMount(init);
+    // onMount(init);
 
     // VARS
     const local = data.local;
@@ -28,11 +28,6 @@
 <main>
     <Checklist data={data.all} />
 </main>
-
-<footer>
-    <p class="note">NOTE: tk.</p>
-    <p class="source">Source:  <a href="https:vancouversun.com" target="_blank">TK</a></p>
-</footer>
   
 <style>
     @import '$css/normalize.css';
@@ -52,16 +47,4 @@
 		text-align: center;
 	} */
 
-    /* SECTIONS  */
-    .section-head {
-        color: var(--grey02) !important;
-        font-family: 'BentonSansCond-RegItalic' !important;
-        font-size: 1.35rem;
-        margin-bottom: 7px;
-        text-align: center;
-        text-transform: uppercase;
-    }
-    .section-copy {
-        text-align: center;
-    }
 </style>

@@ -4,8 +4,10 @@
     // LIBS
     import { onMount } from 'svelte';
     import { writable } from 'svelte/store';
+    // lets you split local storage by repo on githubpages hosted sites
+    import 'https://tomashubelbauer.github.io/github-pages-local-storage/index.js';
 
-    console.log('CHECKLIST DATA: ', data)
+    // console.log('CHECKLIST DATA: ', data)
 
     // VARS
     // gh-pages needs to ensure localStorage isn’t empty – we'll set a default dataset.
@@ -65,7 +67,7 @@
 </div>
 
 <div class="global-list">
-    <p class="section-head">🌎  12 must-visit booths at the VIFW  🌎</p>
+    <p class="section-head">🌎  VIFW’s 12 must-visit booths  🌎</p>
     <p class="section-copy">Our annual best booths list is an ode to wineries that bring their best Vancouver. Here’s a list of producers pouring their best in 2025, including one super pick from their line-up. Don’t forget to taste them all.</p>
     <ul class="wine-list">
         {#each $checklist as item, index}
