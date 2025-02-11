@@ -1,44 +1,19 @@
 <script>
     // COMPONENTS
     import { onMount } from 'svelte';
-    import { csvParse } from 'd3-dsv';
-    import Chart from "$components/Chart.svelte";
-    import Select from "svelte-select"; // https://github.com/rob-balfre/svelte-select
 
     
 
     // DATA
     // import data from "$data/data.js";
-    import { menuItems } from "$data/menu-items";
-    const dataUrl = 'https://raw.githubusercontent.com/ajstarks/dubois-data-portraits/master/challenge/2024/challenge03/data.csv';
 
     // VARIABLES
-    let data, value;
-    const defaultSelectValue = menuItems[0].value;
+    let data
 
-    // REACTIVE VARIABLES
-    $: value, updateData(value);
-
-    async function fetchData(url) {
-        const resp = await fetch(url);
-        data = await resp.text();
-        return csvParse(data);
-    }
-
-
-    function updateData(value) {
-        if (!value || !value.value) return;
-
-        console.log(value);
-    }
+  
 
     async function init() {
-        // fetch remote data
-        data = await fetchData(dataUrl);
-        // console.log(data);
-
-        // default display selector value
-		value = defaultSelectValue;
+        console.log('INIT APP')
     }
 
     onMount(init);
@@ -50,18 +25,7 @@
 </header>
 
 <main>
-    <Select items={menuItems}
-        bind:value
-        change={updateData}
-        placeholder="Pick a city..."
-		showChevron="true"
-		listOpen={false}
-    />
-    
-    <Chart 
-        data={data}
-        value={value}
-    />
+
 </main>
 
 <footer>
