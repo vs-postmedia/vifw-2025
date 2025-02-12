@@ -67,7 +67,7 @@
 </div>
 
 <div class="global-list">
-    <p class="section-head">🌎  VIFW’s 12 must-visit booths  🌎</p>
+    <p class="section-head">🌎 VIFW’s 12 must-visit booths 🌎</p>
     <p class="section-copy">Our annual best booths list is an ode to wineries that bring their best Vancouver. Here’s a list of producers pouring their best in 2025, including one super pick from their line-up. Don’t forget to taste them all.</p>
     <ul class="wine-list">
         {#each $checklist as item, index}
@@ -99,7 +99,7 @@
     .section-head {
         color: var(--grey02) !important;
         font-family: 'BentonSansCond-RegItalic' !important;
-        font-size: 1.35rem;
+        font-size: 1.3rem;
         margin-bottom: 7px;
         text-align: center;
         text-transform: uppercase;
