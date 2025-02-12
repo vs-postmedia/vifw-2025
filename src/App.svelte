@@ -14,14 +14,10 @@
     }
 
     // onMount(init);
-
-    // VARS
-    const local = data.local;
-    const global = data.global;
 </script>
 
 <header>
-    <h1>24 must-try wines at the 2025 Vancouver International Wine Festival tasting room</h1>
+    <!-- <h1>24 must-try wines at the 2025 Vancouver International Wine Festival tasting room</h1> -->
     <!-- <p class="subhead">Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p> -->
 </header>
 
